@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities{
+
+    /* navbar styling */
+    .navbar_style{
+        @apply px-5 py-1 rounded-md hover:bg-yellow-500;
+    }
+    
+    /* input element */
+
+    .input_styled{
+        @apply bg-black border-b-2 border-gray-700 mb-5 w-64 text-green-600 outline-none placeholder:text-gray-400;
+    }
+    /* Link styling */
+
+    .link_styled{
+        @apply text-teal-500 hover:underline;
+    }
+
+    /* btn styling */
+
+    .btn_styled{
+        @apply border border-x-amber-50 border-y-2 border-y-amber-200 rounded-3xl mt-2 text-center text-xl hover:bg-amber-500 cursor-pointer;
+    }
+
+    /* Act as a border */
+
+    .Register_wrapper{
+        @apply relative rounded-3xl overflow-hidden;
+    }
+
+    /* Gradient */
+    .Register_wrapper::before{
+        background: conic-gradient(
+            rgba(222, 155, 8, 0.4) 0deg,
+            rgb(250, 209, 3) 0deg,
+            transparent 80deg
+        );
+
+        @apply absolute h-[150%] w-[150%] content-[''] left-[-20%] top-[-22%] animate-border-spin;
+    }
+
+    .Register_wrapper2{
+        @apply relative rounded-3xl overflow-hidden;
+    }
+
+    .Register_wrapper2::before{
+        background: conic-gradient(
+            rgb(4, 222, 182) 0deg,
+            rgb(0, 246, 197) 0deg,
+            transparent 80deg
+        );
+
+        @apply absolute h-[150%] w-[150%] content-[''] left-[-20%] top-[-22%] animation-delay-3000 animate-border-spin-2;
+    }
+
+
+
+    .animation-delay-3000 {
+        animation-delay: -3s;
+    }
+
+    .animation-fill-mode-f{
+        animation-fill-mode: forwards;
+    }
+    .animation-fill-mode-b{
+        animation-fill-mode: backwards;
+    }
+    .animation-fill-mode-both{
+        animation-fill-mode: both;
+    }
+
+
+    .side_bar_animation{
+        @apply animate-side-bar animation-fill-mode-f;
+    }
+
+    .side_bar_animation_2{
+        @apply animate-side-bar-2 animation-fill-mode-f ;
+    }
+
+
+
+
+
+}
